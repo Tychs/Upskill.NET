@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function hello() {
+            alert("Hello")
+        }
+        function teste() {
+            let s = "2*3"
+            //s.charAt(2) //vai buscar o caracter na posição 2 (0-2 ; 1-* ; 2-3)
+
+            //let x = eval("s") //pega na string e faz o cálculo
+            //let x = eval("s.charAt(2)") 
+            //let x = eval("true == false") retorna qualquer valor mesmo sendo bool
+            //alert(x)
+            eval("hello()") //chama a função hello
+        }
+    </script>
+</head>
+<body>
+    <button onclick="teste()">Click</button>
+</body>
+</html>

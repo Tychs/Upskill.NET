@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carros</title>
+    <link rel="stylesheet" href="projeto_car.css">
+
+</head>
+
+<body>
+
+    <header><img src="car_search.jpg" alt=""></header>
+    <h1>Pesquisa de Automóveis</h1>
+
+    <!-- Filter Section -->
+    <section id="filters">
+        <h2 style="text-align: center;">Filtros</h2>
+        <label for="marca">Marca</label>
+        <select id="marca"></select>
+
+        <label for="modelo">Modelo</label>
+        <select id="modelo"></select>
+
+        <label for="minimo">Preço Mínimo</label>
+        <select id="minimo"></select>
+
+        <label for="maximo">Preço Máximo</label>
+        <select id="maximo"></select>
+
+        <label for="ano">Ano</label>
+        <select id="ano"></select>
+
+        <label for="cor">Cor</label>
+        <select id="cor"></select>
+    </section>
+
+    <!-- Display Section -->
+    <h2>Resultado</h2>
+    <br>
+    <label for="sortBy">Ordenar por:</label>
+    <select id="sortBy">
+        <option value="default">Padrão</option>
+        <option value="marca-asc">Marca (A-Z)</option>
+        <option value="marca-desc">Marca (Z-A)</option>
+    </select>
+    <br>
+    <!-- Car list table -->
+    <table id="carList">
+        <thead>
+            <tr>
+                <th id="marcaHeader">Marca</th>
+                <th id="modelo">Modelo</th>
+                <th id="ano">Ano</th>
+                <th id="preco">Preço</th>
+                <th id="portas">Portas</th>
+                <th id="cor">Cor</th>
+                <th id="acao">Ação</th>
+            </tr>
+        </thead>
+        <tbody id="resultado">
+            <!-- Car rows will be inserted here -->
+        </tbody>
+    </table>
+    <p>Total de Automóveis: <span id="numAutos">0</span></p>
+
+    <!-- Add Car Button -->
+    <button id="addCarButton">Adicionar Novo Automóvel</button>
+
+    <!-- Add/Edit Car Section (Initially Hidden) -->
+    <section id="add-edit-car">
+        <h2 id="form-title">Adicionar Novo Automóvel</h2>
+        <form id="carForm">
+            <label for="newMarca">Marca:</label>
+            <select id="newMarca" required>
+                <option value="">Selecionar Marca</option>
+            </select>
+
+            <label for="newModelo">Modelo:</label>
+            <select id="newModelo" required>
+                <option value="">Selecionar Modelo</option>
+            </select>
+
+            <label for="newAno">Ano:</label>
+            <select id="newAno" required>
+                <option value="">Selecionar Ano</option>
+            </select>
+            <label for="newPreco">Preço:</label>
+            <select id="newPreco" required>
+                <option value="">Selecionar Preço</option>
+            </select>
+
+            <label for="newPortas">Número de Portas:</label>
+            <select id="newPortas">
+                <option value="3">3</option>
+                <option value="5">5</option>
+            </select>
+
+            <label for="newCor">Cor:</label>
+            <select id="newCor" required>
+                <option value="">Selecionar Cor</option>
+            </select>
+
+            <input type="hidden" id="editingCarIndex"> <!-- Hidden field to track if we are editing -->
+            <button type="submit" id="formButton">Adicionar Carro</button>
+            <button type="button" id="cancelButton">Cancelar</button>
+        </form>
+    </section>
+
+    <script src="projeto_car.js"></script>
+</body>
+
+</html>

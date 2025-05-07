@@ -1,0 +1,216 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Filter Section */
+section#filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+section#filters h2 {
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+section#filters label {
+    flex-basis: 15%;
+    margin-top: 7px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #333;
+}
+
+section#filters select {
+    flex-basis: 30%;
+    padding: 8px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Car List Table */
+table {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    border-collapse: collapse;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+thead {
+    background-color: #7d9aba;
+    color: white;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-size: 16px;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+td {
+    font-size: 14px;
+}
+
+/* Action icons */
+td .action-icon {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+td .delete-icon {
+    color: #f44336;
+}
+
+td .edit-icon {
+    color: #007bff;
+}
+
+#resultado {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+#numAutos {
+    font-weight: bold;
+}
+
+/* Add Car Button */
+button#addCarButton {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#addCarButton:hover {
+    background-color: #0056b3;
+}
+
+/* Add/Edit Car Form */
+#add-edit-car {
+    display: none; /* Initially hidden */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+#add-edit-car h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#add-edit-car label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+#add-edit-car input, #add-edit-car select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#add-edit-car button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#formButton {
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+#formButton:hover {
+    background-color: #0056b3;
+}
+
+#cancelButton {
+    background-color: #f44336;
+    color: white;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#cancelButton:hover {
+    background-color: #d32f2f;
+}
+
+#add-edit-car {
+    display: none;
+    margin-top: 20px;
+}
+
+#cancelButton {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+

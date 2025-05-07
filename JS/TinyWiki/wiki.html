@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny Wiki</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        #content {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #0073aa;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        article {
+            width: 75%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-top: 20px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .infobox {
+            float: right;
+            width: 200px;
+            height: 180px;
+            background: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .infobox img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .contents {
+            margin-left: 5px;
+            width: 300px;
+            height: 330px;
+            background: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+        }
+
+       /*header {
+            width: 75%;
+            height: 75px;
+            float: right;
+            background-color: #0073aa;
+        }*/
+
+        article {
+            width: 100%;
+            margin-top: 10%;
+        }
+
+        article ol {
+            counter-reset: item;
+            margin: 0;
+            padding: 0;
+        }
+
+        article ol li {
+            display: table;
+            counter-increment: item;
+        }
+
+        article ol li a {
+            text-decoration: none;
+            color: #0073aa;
+        }
+
+        article ol li a:hover {
+            text-decoration: underline;
+        }
+
+        article li:before {
+            content: counters(item, ".") ". ";
+            display: table-cell;
+            padding-right: 0.6em;
+        }
+
+        .panel {
+            width: 1180px;
+            border: 1px solid #395e8e; 
+            background-color: #f0f0f0;
+            margin: auto;
+            padding: 10px;
+        }
+
+        .panel-title, .panel-subtitle {
+            background-color: #adc1e0; 
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .panel-content {
+            text-align: center;
+        }
+
+        .panel-content a {
+            margin: 0 5px;
+            color: #0073aa; 
+            text-decoration: none;
+        }
+
+        .panel-content a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+
+        <!-- <header style="text-align: center;">
+            <label for="search">Search on Wikipedia</label>
+            <input type="text" id="search">
+        </header>-->
+
+        <!-- Sidebar -->
+        <nav style="margin-left: 20px;">
+            <img style="width: 200px; float: left;" src="logo_wiki.jpg" alt="Wiki Logo">
+
+            <ul>
+                <li><a href="#main">Main Page</a></li>
+                <li><a href="#contents">Contents</a></li>
+                <li><a href="#feat_content">Featured Content</a></li>
+                <li style="color: rgb(92, 92, 92);">Interaction</li>
+                <hr style="color: rgb(136, 136, 136);">
+                <li><a href="#help">Help</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portal">Portal</a></li>
+                <li style="color: rgb(92, 92, 92);">Interaction</li>
+                <hr style="color: rgb(136, 136, 136);">
+                <li><a href="#help">Help</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portal">Portal</a></li>
+            </ul>
+        </nav>
+
+        <!-- Article -->
+        <article>
+
+            <l style="font-size: 150%;"><b>Simple Wikipedia Website Template</b></l>
+            <hr>
+            <l>From Wikipedia, the free encyclopedia.</l><br><br>
+            <p style="margin-left: 20px;"><i>This article is about the writing implement. For other uses, see Pencil
+                    (disambiguation)</i></p>
+
+            <!-- Infobox -->
+            <div class="infobox">
+                <img src="pencil.jpg" alt="Blue Pencil">
+                <p>This is a blue <span style="color: blue;">pencil</style></span></p>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus officia, placeat quod enim
+                totam
+                nostrum ipsa! Quos consequatur explicabo amet ab! Natus, eius tempora aut sequi recusandae dolorem
+                consequuntur laudantium? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, dignissimos
+                ducimus. Mollitia iste ducimus sint ad reiciendis tempora incidunt sit eligendi voluptatum,
+                molestiae ut
+                dignissimos magnam temporibus reprehenderit ab distinctio.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id nemo incidunt asperiores nobis,
+                blanditiis
+                debitis eius minima harum eveniet ullam, assumenda quas. Nemo perspiciatis a cupiditate ducimus
+                eligendi, explicabo quos.</p>
+
+            <!-- Index -->
+            <div class="contents">
+                <p style="text-align: center; margin-top: 1px;"><b>Contents</b></p>
+                <ol>
+                    <li><a href="#section1">History</a></li>
+                    <ol>
+                        <li style="margin-left: 20px;"><a href="#section1_1">Camel's Hair Pencil</a></li>
+                        <li style="margin-left: 20px;"><a href="#section1_2">Discovery of Graphite Deposit</a></li>
+                        <li style="margin-left: 20px;"><a href="#section1_3">Wood Holders Added</a></li>
+                        <li style="margin-left: 20px;"><a href="#section1_4">The Pencil in America</a></li>
+                        <li style="margin-left: 20px;"><a href="#section1_5">Eraser Attached</a></li>
+                        <li style="margin-left: 20px;"><a href="#section1_6">Marking Material</a></li>
+                        <li style="margin-left: 20px;"><a href="#section1_7">Pencil Extenders</a></li>
+                    </ol>
+                    <li><a href="#secion2">Health</a></li>
+                    <li><a href="#section3">Manufacture</a></li>
+                    <li><a href="#section4">Grading and Classification</a></li>
+
+                </ol>
+            </div>
+            <br>
+
+            <h2 id="section1">History</h2>
+            <h3 id="section1_1">Lorem ipsum dolor</h3>
+            <p>Error, odit, repellat modi cumque rerum quos nisi sed culpa mollitia, beatae adipisci eveniet a.
+                Explicabo excepturi aliquam veniam aspernatur numquam nostrum.</p>
+
+            <h3 id="section1_2">Distinctio laboriosam</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In doloremque aliquam debitis ipsum, dolorem
+                odio illo fugiat. Veniam praesentium, quis explicabo eos corporis blanditiis iste, quaerat id ad,
+                iure
+                dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+            <h3 id="section1_3">Commodi ab dolore</h3>
+            <p>Distinctio laboriosam repellendus quos voluptatum ducimus autem officia at consectetur? Commodi ab
+                dolore
+                aut laborum est minus molestiae? Deleniti asperiores ducimus totam?</p>
+
+            <h3 id="section1_4">Deleniti asperiores</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In doloremque aliquam debitis ipsum, dolorem
+                odio illo fugiat. Distinctio laboriosam repellendus quos voluptatum ducimus autem officia at
+                consectetur? Commodi ab dolore aut laborum est minus molestiae? Deleniti asperiores ducimus totam?
+            </p>
+
+            <h3 id="section1_5">Veniam praesentium</h3>
+            <p>Veniam praesentium, quis explicabo eos corporis blanditiis iste, quaerat id ad, iure
+                dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit.?</p>
+
+            <h3 id="section1_6">In doloremque aliquam</h3>
+            <p>Nemo explicabo blanditiis nesciunt facilis et error aut perferendis natus nobis deserunt vitae,
+                corporis
+                illo officia, quis non aperiam quae obcaecati similique! Modi nesciunt possimus placeat quis aliquam
+                voluptates itaque sint, nostrum delectus similique numquam dicta quidem?</p>
+
+            <h3 id="section1_7">Distinctio laboriosam</h3>
+            <p>Perferendis aut ad, veniam illum nemo a natus dicta eveniet ea vel incidunt nulla expedita distinctio
+                quibusdam deleniti. Voluptatibus, aut! Tempore, commodi! Reiciendis, magnam ratione ad
+                odio facilis rerum!</p>
+
+            <h2 id="section2">Health</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus voluptates porro sit corporis eum
+                sint
+                doloribus nam qui amet quia odio quaerat eius quidem perspiciatis, ad at eveniet voluptate deleniti!
+            </p>
+
+            <h2 id="section3">Manufacture</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In doloremque aliquam debitis ipsum, dolorem
+                odio illo fugiat. Veniam praesentium, quis explicabo eos corporis blanditiis iste, quaerat id ad,
+                iure
+                dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio laboriosam repellendus
+                quos
+                voluptatum ducimus autem officia at consectetur?</p>
+        </article>
+    </div>
+
+    <div class="panel">
+        <div class="panel-title">
+            Panel title
+        </div>
+        <div class="panel-content">
+            <l>
+                <a href="#">Percipit</a> ·
+                <a href="#">Mnesarchum</a> ·
+                <a href="#">Molestie</a> ·
+                <a href="#">Phaedrum</a> ·
+                <a href="#">Lorem</a> ·
+                <a href="#">Ipsum</a> ·
+                <a href="#">Dolorestitas</a> ·
+                <a href="#">Habeo adipisci</a> ·
+                <a href="#">Has et partem</a> ·
+                <a href="#">Forensibus sea</a>
+            </l>
+            <l>
+                <a href="#">Inani zril</a> ·
+                <a href="#">Vel nisl albucius</a> ·
+                <a href="#">Minimum corrumpit</a> ·
+                <a href="#">Regione suscip</a> ·
+                <a href="#">Percipit maiestatis</a>
+            </l>
+        </div>
+        <div class="panel-subtitle">
+            Subtitle
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>This page was last edited on 29.07.2017 | Template by <a href="https://html5up.net/" alt="HTML">HTML 5 Templates</a></p>
+    </footer>
+
+</body>
+
+</html>

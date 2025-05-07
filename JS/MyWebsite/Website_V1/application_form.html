@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+</head>
+
+<body>
+    <p style="text-align: center;">
+        <a href="homepage.html">Homepage |</a>
+        <a href="blog.html">Blog |</a>
+        <a href="gallery.html">Gallery |</a>
+        <a href="students_data.html">Students Data |</a>
+        <a href="application_form.html">Application Form |</a>
+        <a href="contact.html">Contact |</a>
+        <a href="resources.html">Resources</a>
+    </p>
+
+    <h1 style="text-align: center;">Application Form</h1>
+    <form>
+        <fieldset>
+            <legend><b>Personal Information:</b></legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" value=""><br><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" value=""><br><br>
+            <label for="skype">Skype ID:</label>
+            <input type="text" id="skype" value=""><br><br>
+            <label for="education">Education Degree?</label>
+            <input type="text" id="education" value=""><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend><b>Freelancing Information</b></legend>
+
+            <label>Which platforms do you use for freelancing?</label><br>
+            <input type="checkbox" id="platform1" value="upwork">
+            <label for="platform1"> Upwork</label>
+            <input type="checkbox" id="platform2" value="freelancer">
+            <label for="platform2"> Freelancer</label>
+            <input type="checkbox" id="platform3" value="elancer">
+            <label for="platform3"> Elancer</label>
+            <input type="checkbox" id="platform4" value="Ref_work">
+            <label for="platform4"> Reference based work</label>
+            <input type="checkbox" id="platform5" value="other">
+            <label for="platform5"> Other?</label>
+            <input type="text">
+
+            <br><br>
+            <label>Which clients do you have?</label><br>
+            <input type="checkbox" id="client1" value="Foreign">
+            <label for="client1"> Foreign</label>
+            <input type="checkbox" id="client2" value="Local">
+            <label for="client2"> Local</label>
+
+            <br><br>
+            <label>What is your core area?</label><br>
+            <input type="radio" id="core_area1" value="writer">
+            <label for="core_area1">Writer</label>
+            <input type="radio" id="core_area2" value="developer">
+            <label for="core_area2">Developer</label>
+            <input type="radio" id="core_area3" value="designer">
+            <label for="core_area3">Designer</label>
+            <input type="radio" id="core_area4" value="soft_dev">
+            <label for="core_area4">Software Developer</label>
+            <input type="radio" id="core_area5" value="other">
+            <label for="core_area5"> Other?</label>
+            <input type="text"><br><br>
+            
+        </fieldset>
+
+            <label for="training">What kind of training are you interested in (if required):</label><br>
+            <select id="training">
+              <option value="remote">Remote Training</option>
+              <option value="office">At office</option>
+              <option value="home">Home Training</option>
+            </select><br><br>
+
+            <label for="opinion">Do you want to say something about this website?</label><br>
+            <textarea id="opinion" rows="10" cols="60"></textarea>
+            <input type="submit" value="Submit this form">
+            <button type="button">Reset</button>
+
+
+    </form>
+
+    <hr>
+    <p style="text-align: center;">&copy; Copyright 2020.www.&lt;abc&gt;.com</p>
+</body>
+
+</html>

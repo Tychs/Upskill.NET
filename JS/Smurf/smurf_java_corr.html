@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .estilo_celula {
+            text-align: center;
+            border: 2px solid;
+        }
+
+        .estilo_tabela {
+            width: 100%;
+        }
+
+        .estilo_gap {
+            border-collapse: collapse;
+        }
+    </style>
+
+    <script>
+        let grd = []
+
+        grd[0] = "Smurf1.jpg"
+        grd[1] = ""
+        grd[2] = "Smurf2.jpg"
+        grd[3] = ""
+        grd[4] = "Smurf5.jpg"
+        grd[5] = ""
+        grd[6] = "Smurf3.jpg"
+        grd[7] = ""
+        grd[8] = "Smurf4.jpg"
+
+        function mostrarSmurfs() {
+            for (let i = 0; i < grd.length; i++) {
+                let p = document.getElementById("c" + i); //p = pointer - vai apontar para cada um dos td (c0 - c8)
+                if (grd[i] !== "") {
+                    p.innerHTML = `<img src="${grd[i]}" alt="Smurf" width="100" />`; //o que está dentro do td
+                }
+            }
+        }
+
+        function moverSmurfs() {
+
+            let last = grd[grd.length - 1] //guarda o conteúdo da última posição para não perder
+
+            for (let i = grd.length - 1; i >= 2; i = i - 2) { // começa na grd.length - 1 -> o array tem 9 posições e assim começa na 9-1 = 8 (última posição) e vai até à posição 2 (a posição 0 vai ser preenchida pelo last que é onde guardamos a imagem da última posição)
+                grd[i] = grd[i - 2]; // andar da última para a primeira (anda 2 casas para trás, começa no grd[8])
+            }
+            grd[0] = last;
+            mostrarSmurfs(); //atualiza tabela com as novas posições
+        }
+
+        let intervalId;
+        function iniciar() {
+            if (!intervalId) { // verifica se já existe intervalo
+                intervalId = setInterval(moverSmurfs, 500);
+            }
+        }
+
+        function parar() {
+            if (intervalId) {
+                clearInterval(intervalId);
+                intervalId = null; //reinicializa a variável para permitir um novo intervalo
+            }
+        }
+
+        function moverSmurfs2() {
+            let last = grd[grd.length - 1];
+            for (let i = grd.length - 1; i >= 2; i = i - 2) {
+                for (let j = i - 1; i >= 2; i = i - 2) {
+                    let k = j;
+                    break;
+                }
+            }
+            grd[0] = last;
+            mostrarSmurfs();
+        }
+    </script>
+</head>
+
+<body> <!-- <body onload="mostrarSmurfs()"> corre antes da página carregar, forma mais fácil de chamar a função-->
+
+    <h1 style="text-align: center;">Smurfs</h1>
+    <button onclick="iniciar()">Iniciar</button>
+    <button onclick="parar()">Parar</button>
+
+    <table class="estilo_tabela estilo_gap">
+        <tr>
+            <td id="c0" class="estilo_celula"></td>
+            <td id="c1" class="estilo_celula"></td>
+            <td id="c2" class="estilo_celula"></td>
+        </tr>
+        <tr>
+            <td id="c3" class="estilo_celula"></td>
+            <td id="c4" class="estilo_celula"></td>
+            <td id="c5" class="estilo_celula"></td>
+        </tr>
+        <tr>
+            <td id="c6" class="estilo_celula"></td>
+            <td id="c7" class="estilo_celula"></td>
+            <td id="c8" class="estilo_celula"></td>
+        </tr>
+    </table>
+
+    <script>
+        mostrarSmurfs();
+        //alternativa a <body onload="mostrarSmurfs()">
+        //tem de estar no final do html, senão chama a função antes da tabela ser criada
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .estilo_celula {
+            text-align: center;
+            border: 2px solid;
+        }
+
+        .estilo_tabela {
+            width: 100%;
+        }
+
+        .estilo_gap {
+            border-collapse: collapse;
+        }
+    </style>
+
+    <script>
+        let smurf = []
+
+        smurf[0] = "Smurf1.jpg"
+        smurf[1] = ""
+        smurf[2] = "Smurf2.jpg"
+        smurf[3] = ""
+        smurf[4] = "Smurf5.jpg"
+        smurf[5] = ""
+        smurf[6] = "Smurf3.jpg"
+        smurf[7] = ""
+        smurf[8] = "Smurf4.jpg"
+
+        function mostrarSmurf() {
+            for (let i = 0; i < smurf.length; i++) {
+                let y = document.getElementById("tabela" + (i + 1));
+                if (smurf[i] !== "") {
+                    y.innerHTML = `<img src="${smurf[i]}" alt="Smurf" width="100" />`;
+                } else {
+                    y.innerHTML = "";
+                }
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <button onclick="mostrarSmurf()">Smurfs</button>
+    </div>
+    <table class="estilo_tabela estilo_gap">
+        <tr>
+            <td id="tabela1" class="estilo_celula"></td>
+            <td id="tabela2" class="estilo_celula"></td>
+            <td id="tabela3" class="estilo_celula"></td>
+        </tr>
+        <tr>
+            <td id="tabela4" class="estilo_celula"></td>
+            <td id="tabela5" class="estilo_celula"></td>
+            <td id="tabela6" class="estilo_celula"></td>
+        </tr>
+        <tr>
+            <td id="tabela7" class="estilo_celula"></td>
+            <td id="tabela8" class="estilo_celula"></td>
+            <td id="tabela9" class="estilo_celula"></td>
+        </tr>
+    </table>
+</body>
+
+</html>

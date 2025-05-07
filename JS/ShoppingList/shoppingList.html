@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Example</title>
+    <style>
+        .item {
+            margin: 5px 0;
+        }
+
+        .highlight {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body onload="init()">
+    <h1>Shopping List</h1>
+
+    <!-- Form to add new items -->
+    <form id="item-form">
+        <input type="text" id="item-input" placeholder="Add a new item" required>
+        <button type="submit">Add Item</button>
+    </form>
+
+    <!-- Unordered list of items -->
+    <ul id="item-list">
+        <li class="item">Apples</li>
+        <li class="item">Bananas</li>
+        <li class="item">Carrots</li>
+    </ul>
+
+    <!-- Button to clear all items -->
+    <button id="clear-items" onclick="onClickClearAll()">Clear Items</button>
+
+    <div id="coords"></div>
+    <script src="shoppingList.js"></script>
+</body>
+</html>
+

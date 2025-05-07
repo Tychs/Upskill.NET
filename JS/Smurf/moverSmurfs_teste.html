@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .estilo_celula {
+            text-align: center;
+            border: 2px solid;
+        }
+
+        .estilo_tabela {
+            width: 100%;
+        }
+
+        .estilo_gap {
+            border-collapse: collapse;
+        }
+    </style>
+
+    <script>
+        let grd = []
+
+        grd[0] = "Smurf1.jpg"
+        grd[1] = ""
+        grd[2] = "Smurf2.jpg"
+        grd[3] = ""
+        grd[4] = "Smurf5.jpg"
+        grd[5] = ""
+        grd[6] = "Smurf3.jpg"
+        grd[7] = ""
+        grd[8] = "Smurf4.jpg"
+
+        function mostrarSmurfs() {
+            for (let i = 0; i < grd.length; i++) {
+                let p = document.getElementById("c" + i);
+                if (grd[i] !== "") {
+                    p.innerHTML = `<img src="${grd[i]}" alt="Smurf" width="100" />`;
+                } else {
+                    p.innerHTML = ""; // Limpa a célula se estiver vazia
+                }
+            }
+        }
+
+        function moverSmurfs() {
+            let temp = []; // Cria um novo array temporário para as imagens
+            for (let i = 0; i < grd.length; i++) {
+                temp[i] = ""; // Inicializa todas as posições com vazio
+            }
+
+            // Move as imagens para as próximas posições ocupadas
+            for (let i = 0; i < grd.length; i++) {
+                if (grd[i] !== "") {
+                    let nextPos = (i + 1) % grd.length; // Calcula a próxima posição
+                    while (temp[nextPos] !== "") { // Se a próxima posição já estiver ocupada
+                        nextPos = (nextPos + 1) % grd.length; // Move para a próxima posição
+                    }
+                    temp[nextPos] = grd[i]; // Move a imagem para a nova posição
+                }
+            }
+            grd = temp; // Atualiza o array original
+            mostrarSmurfs(); // Atualiza a tabela com as novas posições
+        }
+    </script>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Smurfs</h1>
+    <button onclick="moverSmurfs()">Mover</button>
+    <table class="estilo_tabela estilo_gap">
+        <tr>
+            <td id="c0" class="estilo_celula"></td>
+            <td id="c1" class="estilo_celula"></td>
+            <td id="c2" class="estilo_celula"></td>
+        </tr>
+        <tr>
+            <td id="c3" class="estilo_celula"></td>
+            <td id="c4" class="estilo_celula"></td>
+            <td id="c5" class="estilo_celula"></td>
+        </tr>
+        <tr>
+            <td id="c6" class="estilo_celula"></td>
+            <td id="c7" class="estilo_celula"></td>
+            <td id="c8" class="estilo_celula"></td>
+        </tr>
+    </table>
+
+    <script>
+        mostrarSmurfs(); // Chama a função para mostrar as imagens na tabela
+    </script>
+</body>
+
+</html>
